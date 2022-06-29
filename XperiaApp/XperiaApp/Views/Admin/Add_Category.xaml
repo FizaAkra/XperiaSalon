@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XperiaApp.Views.Admin.Add_Category"
+             BackgroundColor="#ed2d46">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,0" Source="ic_zp_gen_white.png" Aspect="AspectFit" HeightRequest="170" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="10,-5,10,10" BorderColor="White" BackgroundColor="Black" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" Padding="10,20,10,30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="Add Category!" FontSize="24" FontAttributes="Bold" TextColor="#ed2d46" HorizontalOptions="CenterAndExpand" Padding="0" ></Label>
+
+                    <Image Grid.Row="1" x:Name="PreviewPic" Source="came_ra.png" HeightRequest="90" WidthRequest="100" Margin="90,10" BackgroundColor="#ed2d46" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Entry Grid.Row="2" x:Name="txtCatName" Placeholder="Category" Keyboard="Chat"  Margin="0,10,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                    <Entry Grid.Row="3" x:Name="txtCatDetails" Placeholder="Category Detail" Keyboard="Chat" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                 <Button Grid.Row="4"  Text="Add Category" x:Name="btnCat" Clicked="btnCat_Clicked" CornerRadius="45" BackgroundColor="#ed2d46"/>
+ <StackLayout Grid.Row="5" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="30,50" Spacing="20">
+                        <Image Source="whats_a.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="twi_8r.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="face_boo8.png" WidthRequest="20"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="insta_gr1.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

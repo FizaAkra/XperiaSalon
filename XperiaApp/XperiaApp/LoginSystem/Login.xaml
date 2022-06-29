@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="XperiaApp.LoginSystem.Login"
+             BackgroundColor="#ed2d46">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,0" Source="ic_zp_gen_white.png" Aspect="AspectFit" HeightRequest="170" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="10,10,10,10" BorderColor="White" HasShadow="True" BackgroundColor="Black"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        
+                        
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Text="Welcome Back!" FontSize="24" FontAttributes="Bold" TextColor="#ed2d46" HorizontalOptions="CenterAndExpand" Padding="10"></Label>
+                    <Label Grid.Row="1" Margin="0,-20,0,0" Text="Login in to account"  TextColor="#ed2d46"  HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry Grid.Row="2" x:Name="txtEmail" Placeholder="Email" Keyboard="Email"   Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                    <Entry Grid.Row="3" x:Name="txtPassword"  Placeholder="Password" IsPassword="True"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                    <ActivityIndicator x:Name="LoadingInd" IsRunning="False"/>
+                    <Button Grid.Row="4" Text="Login" Clicked="Button_Clicked" BackgroundColor="#ed2d46" CornerRadius="20"></Button>
+                    
+                    <StackLayout Grid.Row="5" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
+
+                        <Label HorizontalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Don't Have an account?"  TextColor="#ed2d46" FontSize="15" />
+                                    <Span Text="Register Now" TextColor="#ed2d46" FontAttributes="Bold"  TextDecorations="Underline" FontSize="15"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="6" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="20,1" Spacing="20">
+                        <Image Source="whats_a.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="twi_8r.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="face_boo8.png" WidthRequest="20"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="insta_gr1.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                    </StackLayout>
+                    </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
